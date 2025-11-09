@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Agentic RAG Demo</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8fafc;
+  margin: 40px;
+}
+h1 {
+  color: #4f46e5;
+}
+button {
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #3730a3;
+}
+#upload-section, #chat-section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.doc {
+  background: #f1f5f9;
+  padding: 10px;
+  margin: 6px 0;
+  border-left: 4px solid #10b981;
+  border-radius: 6px;
+}
+#sources { margin-top: 10px; }
+input[type="text"] {
+  width: 60%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+}
+</style>
+</head>
+<body>
+  <h1> RAG Demo</h1>
+
+  <div id="upload-section">
+    <h3>Upload tài liệu</h3>
+    <input type="file" id="file-input" multiple>
+    <button onclick="uploadFiles()">Tải lên</button>
+    <p id="upload-status"></p>
+  </div>
+
+  <div id="chat-section">
+    <h3> Hỏi đáp</h3>
+    <input type="text" id="question" placeholder="Nhập câu hỏi...">
+    <button onclick="askQuestion()">Gửi</button>
+    <p><strong> Thời gian:</strong> <span id="time"></span></p>
+    <p><strong> Trả lời:</strong> <span id="answer"></span></p>
+    <div id="sources"></div>
+  </div>
+
+  <script>
+  async function uploadFiles() {
+    const files = document.getElementById("file-input").files;
+    if (!files.length) return alert("Chưa chọn file!");
+    const formData = new FormData();
+    for (const file of files) formData.append("files[]", file);
+    document.getElementById("upload-status").textContent = " Đang xử lý...";
+    const res = await fetch("/upload", { method: "POST", body: formData });
+    const data = await res.json();
+    document.getElementById("upload-status").textContent = data.message || data.error;
+  }
+
+  async function askQuestion() {
+    const question = document.getElementById("question").value;
+    if (!question) return alert("Vui lòng nhập câu hỏi!");
+    document.getElementById("answer").textContent = " Đang suy nghĩ...";
+    const res = await fetch("/ask", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ question })
+    });
+    const data = await res.json();
+    document.getElementById("answer").textContent = data.answer;
+    document.getElementById("time").textContent = data.elapsed + "s";
+
+    const sourcesDiv = document.getElementById("sources");
+    sourcesDiv.innerHTML = "<h4> Nguồn:</h4>";
+    data.sources.forEach((doc, i) => {
+      sourcesDiv.innerHTML += `<div class='doc'>
+        <b>[${i+1}] ${doc.source}</b><br>${doc.content}...
+      </div>`;
+    });
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="190dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:background="@drawable/shadow_bg">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageCCTC"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:scaleType="centerCrop"
+        tools:srcCompat="@drawable/ptit_icon" />
+
+    <TextView
+        android:id="@+id/textTitleCCTC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/imageCCTC"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="Hội đồng Học viện"
+        android:layout_marginTop="5dp"/>
+
+    <ImageView
+        android:id="@+id/icon_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/phone_icon"
+        android:layout_below="@id/imageCCTC"
+        android:layout_alignLeft="@id/imageCCTC"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/textCCTCPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="024 3756 2186"
+        android:layout_below="@id/imageCCTC"
+        android:layout_toEndOf="@id/icon_phone"
+        android:layout_marginTop="23dp"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/black"
+        android:textStyle="normal"/>
+
+
+    <ImageView
+        android:id="@+id/icon_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/mail_icon"
+        android:layout_below="@id/icon_phone"
+        android:layout_alignLeft="@id/icon_phone"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/textCCTCMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ctsv@ptit.edu.vn"
+        android:layout_below="@id/textCCTCPhone"
+        android:layout_toEndOf="@id/icon_mail"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/black"
+        android:textStyle="normal"/>
+
+    <ImageView
+        android:id="@+id/icon_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icon_location"
+        android:layout_below="@id/icon_mail"
+        android:layout_alignLeft="@id/icon_mail"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/textCCTCLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Km10, Đường Nguyễn Trãi, Q. Hà Đông, Hà Nội"
+        android:layout_below="@id/textCCTCMail"
+        android:layout_toEndOf="@id/icon_mail"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/black"
+        android:textStyle="normal"/>
+
+
+
+</RelativeLayout>

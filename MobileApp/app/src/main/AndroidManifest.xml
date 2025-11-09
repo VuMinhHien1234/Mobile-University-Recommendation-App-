@@ -1,0 +1,62 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/bg_linered"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/bg_linered"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication">
+
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" android:exported="true"/>
+        <activity android:name=".ui.truong.Program.EducationProgramDetailActivity" android:exported="true"  />
+        <activity android:name=".ui.truong.Program.AfterUniversityPhdActivity" android:exported="true"  />
+        <activity android:name=".ui.truong.Program.AfterUniverisityMasterActivity" android:exported="true"  />
+        <activity android:name=".ui.truong.Program.AfterUniversityActivity" android:exported="true"  />
+        <activity android:name=".ui.truong.Program.EducationModelDetail2Activity" android:exported="true"  />
+        <activity android:name=".ui.truong.Program.EducationModeDetailActivity" android:exported="true"  />
+        <activity android:name=".ui.truong.Program.EducationProgramActivity" android:exported="true"  />
+        <activity android:name=".ui.truong.Program.EducationModelActivity" android:exported="true"  />
+        <activity android:name=".ui.truong.Program.AllProgramActivity" android:exported="true"  />
+        <activity android:name=".ui.truong.TruongDetailActivity" android:exported="true" />
+        <activity android:name=".ui.truong.AllTruongActivity" android:exported="true" />
+        <activity android:name=".ui.xettuyen.XetTuyenSomActivity" android:exported="true"/>
+        <activity android:name=".ui.sinhvien.hoatdongsinhvien.HoatDongSinhVienActivity" android:exported="true"/>
+        <activity android:name=".ui.sinhvien.hocbong.HocBongActivity" android:exported="true"/>
+        <activity android:name=".ui.sinhvien.clb.CLBActivity" android:exported="true"/>
+        <activity android:name=".ui.sinhvien.cauhoithuonggap.FAQActivity" android:exported="true"/>
+        <activity android:name=".ui.gioithieu.cosovatchat.CoSoVatChatActivity" android:exported="true"/>
+        <activity android:name=".ui.gioithieu.cocautochuc.CoCauToChucActivity" android:exported="true"/>
+        <activity android:name=".ui.gioithieu.nguonnhanluc.NguonNhanLucActivity" android:exported="true"/>
+        <activity android:name=".ui.profile.ThayDoiThongTinCaNhanActivity" android:exported="true"/>
+        <activity android:name=".ui.profile.ThongTinCaNhanActivity" android:exported="true"/>
+        <activity android:name=".ui.profile.ThayDoiThongTinTaiKhoanActivity" android:exported="true"/>
+        <activity android:name=".ui.profile.ThongTinTaiKhoanActivity" android:exported="true"/>
+        <activity android:name=".ui.admission.AdmissionPolicyActivity"/>
+        <activity android:name=".ui.admission.FeeActivity" android:exported="false"/>
+        <activity android:name=".ui.admission.EmploymentStatsActivity" android:exported="false"/>
+        <activity android:name=".ui.admission.ProfessorCouncilActivity" android:exported="false" />
+        <activity android:name=".ui.admission.PartnersActivity" android:exported="false"/>
+        <activity android:name=".ui.admission.FeeDetailActivity" android:exported="false"/>
+        <activity android:name=".ui.admission.AdmissionMethodThptActivity" android:exported="false"/>
+        <activity android:name=".ui.admission.HsaActivity" android:exported="false"/>
+        <activity android:name=".ui.admission.AptActivity" android:exported="false"/>
+        <activity android:name=".ui.admission.TsaActivity" android:exported="false"/>
+        <activity android:name=".ui.admission.SatActivity" android:exported="false"/>
+        <activity android:name=".ui.admission.SptActivity" android:exported="false"/>
+    </application>
+</manifest>

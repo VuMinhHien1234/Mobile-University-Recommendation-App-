@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="180dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:background="@drawable/shadow_bg"
+    android:padding="10dp">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageCLB"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tools:srcCompat="@tools:sample/avatars"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/CircleImageView"
+        android:layout_marginTop="16dp"/>
+
+
+    <TextView
+        android:id="@+id/textNameCLB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CLB IT PTIT"
+        android:layout_below="@id/imageCLB"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/textNameCN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textNameCLB"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:text="Chủ nghiệm: Vũ Minh Hiền" />
+
+    <LinearLayout
+        android:id="@+id/seperate"
+        android:layout_width="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/textNameCN"
+        android:background="@color/gray"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textLinkFace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seperate"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:text="http:facebook.com" />
+
+
+</RelativeLayout>

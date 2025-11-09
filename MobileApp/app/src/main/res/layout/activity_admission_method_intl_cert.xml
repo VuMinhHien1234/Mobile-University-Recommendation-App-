@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <include
+                android:id="@+id/viewTopbar"
+                layout="@layout/view_topbar" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Phương thức xét tuyển chứng chỉ ĐGNL quốc tế" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_detail_outline"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="1. Đối tượng tuyển sinh" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="2dp"
+                    android:singleLine="false"
+                    android:scrollHorizontally="false"
+                    android:paddingTop="4dp"
+                    android:text="- Tuyển sinh theo quy chế tuyển sinh đại học hiện hành của Bộ GDĐT và của Đại học, cụ thể như sau:\n• Đối tượng dự tuyển được xác định tại thời điểm xét tuyển (trước khi công bố kết quả xét tuyển chính thức).\n• Người đã được công nhận tốt nghiệp THPT của Việt Nam hoặc nước ngoài (đủ điều kiện theo quy định).\n• Người có bằng tốt nghiệp trung cấp và hoàn thành các học phần văn hoá THPT theo quy định." />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:textStyle="bold"
+                    android:text="2. Điều kiện xét tuyển" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="2dp"
+                    android:paddingTop="4dp"
+                    android:text="- Có chứng chỉ đánh giá năng lực quốc tế SAT từ 1250/1600 hoặc ACT từ 25/36 trở lên (hoặc ngưỡng do trường quy định từng năm)." />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:textStyle="bold"
+                    android:text="3. Cách tính điểm" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="2dp"
+                    android:paddingTop="4dp"
+                    android:text="ĐXT = Điểm SAT/ACT + Điểm cộng (nếu có) + Điểm ưu tiên (nếu có)" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="12dp"
+                android:textStyle="bold"
+                android:text="Điểm chuẩn 2025" />
+
+            <include layout="@layout/view_score_table_header_intl" />
+
+            <LinearLayout
+                android:id="@+id/llScoresContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

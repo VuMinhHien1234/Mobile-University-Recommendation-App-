@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="20dp"/>
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nguồn nhân lực"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textNguonNhanLuc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xác định nguồn nhân lực là tài sản quý giá, PTIT luôn quan tâm bồi dưỡng và phát triển “vốn con người”. Thời gian qua, PTIT đã xây dựng và phát triển cơ cấu nguồn nhân lực một cách bền vững.\n
+        \nPTIT có gần 900 cán bộ, giảng viên, nghiên cứu trong đó hơn 70% cán bộ, giảng viên, nghiên cứu viên của Học viện trực tiếp tham gia giảng dạy, hướng dẫn thực hành – thực tập, nghiên cứu và chuyển giao công nghệ, 100% giảng viên đại học đạt chuẩn và trên chuẩn về trình độ chuyên môn, kỹ năng, phương pháp giảng dạy đại học, nghiên cứu khoa học và chuyển giao công nghệ. Nhiều giảng viên đã tu nghiệp tại nhiều trường Đại học danh tiếng của các nước tiên tiến trên thế giới."
+        android:layout_below="@id/topBar"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="24dp"/>
+
+    <ImageView
+        android:id="@+id/imageNguonNhanLuc"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/img_bk"
+        android:layout_below="@id/textNguonNhanLuc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/rounded_img"
+        android:clipToOutline="true"/>
+
+
+</RelativeLayout>

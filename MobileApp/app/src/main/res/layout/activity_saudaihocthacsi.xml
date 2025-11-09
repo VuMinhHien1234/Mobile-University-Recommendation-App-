@@ -1,0 +1,123 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/view_topbar" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_linered"
+                android:padding="24dp"
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="I. MỤC TIÊU ĐÀO TẠO"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/holo_red_dark"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Đào tạo trình độ tiến sĩ là nhằm đào tạo những nhà khoa học có trình độ lý thuyết chuyên môn sâu và năng lực thực hành phù hợp, có kỹ năng phân tích cùng năng lực vận dụng kiến thức để giải quyết các vấn đề thực tế xuất hiện trong phạm vi chuyên môn của mình, có khả năng nghiên cứu độc lập, sáng tạo, khả năng phát hiện và giải quyết những vấn đề mới có ý nghĩa về khoa học, công nghệ và hướng dẫn nghiên cứu khoa học. "
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="8dp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="II. CHỈ TIÊU TUYỂN SINH VÀ CHUYÊN NGÀNH ĐÀO TẠO"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:layout_marginTop="8dp" />
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    >
+
+                    <TableLayout
+                        android:id="@+id/tableLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="*" />
+                </HorizontalScrollView>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="III. HÌNH THỨC TUYỂN SINH: XÉT TUYỂN"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="8dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="IV. ĐIỀU KIỆN DỰ TUYỂN:"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="8dp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Người dự tuyển đào tạo trình độ tiến sĩ phải có các điều kiện sau:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1. Đã tốt nghiệp trình độ thạc sĩ chuyên ngành phù hợp hoặc gần với chuyên ngành đăng ký dự tuyển hoặc đã tốt nghiệp đại học hạng giỏi trở lên ngành phù hợp với chuyên ngành đăng ký dự tuyển đào tạo trình độ tiến sĩ;\n 2. Có kinh nghiệm nghiên cứu thể hiện qua luận văn thạc sĩ của chương trình đào tạo định hướng nghiên cứu; hoặc bài báo, cáo cáo khoa học đã công bố; hoặc có thời gian công tác từ 02 năm (24 tháng) trở lên là giảng viên, nghiên cứu viên của các cơ sở đào tạo, tổ chức khoa học và công nghệ;\n3. Có đề cương định hướng nghiên cứu, trong đó trình bày rõ ràng về đề tài hoặc lĩnh vực nghiên cứu, gồm các nội dung:\n a) Lý do chọn lĩnh vực nghiên cứu, mục tiêu nghiên cứu và mong muốn đạt được; \n b) Kế hoạch thực hiện trong thời gian đào tạo; \n c) Những kinh nghiệm, kiến thức, sự hiểu biết cũng như những chuẩn bị của thí sinh trong vấn đề hay lĩnh vực dự định nghiên cứu; \n d) Dự kiến việc làm sau khi tốt nghiệp; \n 5. Người dự tuyển là công dân nước ngoài nếu đăng ký theo học chương trình đào tạo trình độ tiến sĩ bằng tiếng Việt phải có chứng chỉ tiếng Việt tối thiểu từ bậc 4 trở lên theo Khung năng lực tiếng Việt dùng cho người nước ngoài và có khả năng giao tiếp được bằng tiếng Anh trong chuyên môn (có thể diễn đạt những vấn đề thuộc lĩnh vực chuyên môn cho người khác hiểu bằng tiếng Anh và hiểu được người khác trình bày những vấn đề chuyên môn bằng tiếng Anh), trừ những trường hợp là người bản ngữ của ngôn ngữ được sử dụng trong chương trình đào tạo tiến sĩ.   "
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="4dp" />
+
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnDetail"
+                android:layout_width="361dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="100dp"
+                android:layout_marginVertical="16dp"
+                android:background="@drawable/button_orange_border"
+                android:text="LIÊN HỆ VỚI CHÚNG TÔI "
+                android:textColor="#FFFFFF"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_nav_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

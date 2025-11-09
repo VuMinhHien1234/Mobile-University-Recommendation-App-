@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:background="@drawable/shadow_bg"
+    android:padding="5dp">
+
+
+    <ImageView
+        android:id="@+id/imageHDSV"
+        android:layout_width="320dp"
+        android:layout_height="160dp"
+        tools:srcCompat="@tools:sample/avatars"
+        android:scaleType="centerCrop"
+        android:background="@drawable/rounded_img"
+        android:clipToOutline="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <ImageView
+        android:id="@+id/imageDateHDSV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_calendar"
+        android:layout_below="@id/imageHDSV"
+        android:layout_alignLeft="@id/imageHDSV"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/textDateHDSV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="30/09/2025"
+        android:layout_below="@id/imageHDSV"
+        android:layout_toEndOf="@id/imageDateHDSV"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/textDesHDSV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageDateHDSV"
+        android:layout_alignLeft="@id/imageDateHDSV"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:text="I love beijing" />
+
+
+</RelativeLayout>

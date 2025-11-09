@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:background="@drawable/shadow_bg">
+
+
+    <ImageView
+        android:id="@+id/imageHB"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        tools:srcCompat="@tools:sample/avatars"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_img"
+        android:clipToOutline="true"
+        />
+
+    <ImageView
+        android:id="@+id/imageDateHB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_calendar"
+        android:layout_alignLeft="@id/imageHB"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/imageHB"/>
+
+    <TextView
+        android:id="@+id/textDateHB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageHB"
+        android:layout_toEndOf="@id/imageDateHB"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:layout_marginLeft="36dp"
+        android:text="30/09/2025"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/textDesHB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:layout_below="@id/imageDateHB"
+        android:layout_alignLeft="@id/imageDateHB"
+        android:layout_marginTop="5dp"/>
+
+
+</RelativeLayout>

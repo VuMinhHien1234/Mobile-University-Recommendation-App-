@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_linered"
+    android:layout_marginBottom="10dp"
+   >
+    <TextView
+        android:id="@+id/tvMethod"
+        android:layout_width="wrap_content"  android:color="@color/black"
+        android:layout_height="wrap_content"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/tvBenmark"
+        android:layout_width="wrap_content"  android:color="@color/black"
+        android:layout_height="wrap_content"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/tvUserScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:color="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvUniversityId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"   android:color="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvMajorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  android:color="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvSuitableRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  android:color="@color/black"
+        android:textSize="16sp" />
+</LinearLayout>
